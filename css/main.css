@@ -1,0 +1,14 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+.nav_bar {
+    background-color: aqua;
+}
+.nav_type {
+    font-size: 2rem;
+}
