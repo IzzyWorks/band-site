@@ -30,6 +30,16 @@ ul {
     margin: 0px;
     padding: 0px;
 }
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+        @include tablet {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+    }  
+}
+
 .main-nav {
     & {
         display: flex;
@@ -42,7 +52,8 @@ ul {
 
             @include tablet  {
         padding: 0 $tablet-outside-gutter 0 $tablet-outside-gutter;  
-        justify-content: flex-start;     
+        // justify-content: flex-start;     
+        align-content: flex-end;
         }
 
             @include desktop {
@@ -55,17 +66,35 @@ ul {
         justify-content: center;
         padding-top: 0.5rem;
         width: 100%;
+        @include tablet  {
+            // display: inli dne;
+            // justify-content: flex-start;
+            // align-items: center;
+            width: auto;  
+            margin-right: 4rem;
+            margin-bottom: 20px;
+            }
     }
     &__btn {
         display: flex;
         justify-content: center;
         padding-bottom: 0.25rem;
         width: 50%;
-        border-bottom: solid 5px $white;
+
+        @include tablet  {
+            // display: inline;
+            // justify-content: flex-start; 
+            align-items: center; 
+            width: auto;  
+            margin-right: 4rem;
+            }
+        &--active {
+            border-bottom: solid 5px $white;
+        }
     }
     &__btn-font {
         font-size: 0.75rem;
-        font-weight: 500;
+        font-weight: 300;
         color: $white;
     }
 
@@ -80,4 +109,24 @@ ul {
 }
 .logo-icon {
     height: 1 rem;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    background-image: url(/assets/Images/Photo-gallery-1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 183px;
+    @include tablet  {
+        height: 400px;
+        }
+        &__font {
+            padding: 1rem;
+            color: $white;   
+                @include tablet  {
+                    padding: 1.5rem;;
+                    }
+        }
 }

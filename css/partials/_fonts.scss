@@ -52,14 +52,23 @@
     font-display: swap;
 }
 
-// @font-face {
-//     font-family: 'AvenirNext LT Pro';
-//     src: url('AvenirNextLTPro-Demi.woff2') format('woff2'),
-//         url('AvenirNextLTPro-Demi.woff') format('woff');
-//     font-weight: bold;
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('AvenirNextLTPro-DemiIt.woff2') format('woff2'),
+        url('AvenirNextLTPro-DemiIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('AvenirNextLTPro-Demi.woff2') format('woff2'),
+        url('AvenirNextLTPro-Demi.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 // @font-face {
 //     font-family: 'AvenirNext LT Pro';
@@ -70,32 +79,23 @@
 //     font-display: swap;
 // }
 
-// @font-face {
-//     font-family: 'AvenirNext LT Pro';
-//     src: url('AvenirNextLTPro-LightIt.woff2') format('woff2'),
-//         url('AvenirNextLTPro-LightIt.woff') format('woff');
-//     font-weight: 300;
-//     font-style: italic;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('AvenirNextLTPro-LightIt.woff2') format('woff2'),
+        url('AvenirNextLTPro-LightIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
 
-// @font-face {
-//     font-family: 'AvenirNext LT Pro';
-//     src: url('AvenirNextLTPro-DemiIt.woff2') format('woff2'),
-//         url('AvenirNextLTPro-DemiIt.woff') format('woff');
-//     font-weight: bold;
-//     font-style: italic;
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'AvenirNext LT Pro';
-//     src: url('AvenirNextLTPro-Light.woff2') format('woff2'),
-//         url('AvenirNextLTPro-Light.woff') format('woff');
-//     font-weight: 300;
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('AvenirNextLTPro-Light.woff2') format('woff2'),
+        url('AvenirNextLTPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 
 // @font-face {
 //     font-family: 'AvenirNext LT Pro';
