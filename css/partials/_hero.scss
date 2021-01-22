@@ -1,0 +1,42 @@
+.hero {
+    display: flex;
+    align-items: center;
+    background-image: url(/assets/Images/concert-1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 183px;
+    @include tablet  {
+        height: 400px;
+    }
+    @include desktop  {
+        height: 670px;
+    }
+    &__font {
+        padding: 1rem;
+        color: $white;   
+        @include tablet  {
+            padding: 1.5rem;
+            width: 100%;       
+        }
+        @include desktop  {
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            // max-width: 1440px;
+        }
+}
+    &__container {
+        // padding: 1rem;
+        // color: $white;   
+        // @include tablet  {
+        //     padding: 1.5rem;
+
+        @include desktop  {
+            // width: 60%;
+            width: 100%;
+            max-width: 1440px;
+            margin: auto;
+
+    }
+}}
