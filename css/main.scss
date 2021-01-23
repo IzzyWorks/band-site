@@ -36,16 +36,16 @@ ul {
 h1 {
     font-size: 1.5rem;
     font-weight: bold;
-    line-height: 2rem;
+    line-height: 1.75rem;
     @include tablet {
         font-size: 3.75rem;
         line-height: 4.25rem;
     }  
 }
 h2 {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: bold;
-    line-height: 1.375rem;
+    line-height: 1.25rem;
     @include tablet {
         font-size: 1.5rem;
         line-height: 2.75rem;
@@ -58,5 +58,14 @@ h3 {
     @include tablet {
         font-size: 1.5rem;
         line-height: 2.75rem;
+    } 
+} 
+h4 {
+    font-size: 0.55rem;
+    font-weight: normal;
+    line-height: 0.95rem;
+    @include tablet {
+        font-size: 0.75rem;
+        line-height: 1.375rem;
     }  
 }

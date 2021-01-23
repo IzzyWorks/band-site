@@ -1,34 +1,144 @@
 .article {
-    padding: 0rem 1rem 0rem 1rem;
-    display: flex;
-    flex-flow: column;
-    // align-items: center;
+    padding: 0rem 0.8125rem 0rem 0.8125rem;
     @include tablet  {
-        flex-flow: column;
+        padding: 0rem 1.125rem 0rem 1.125rem;
     }
-    // @include desktop  {
-    //     height: 670px;
-    // }
+    @include desktop  {
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+    }
     &__font {
-        padding: 1rem;
-        color: $black;   
+        text-rendering: optimizeLegibility;
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $black;
+        padding: 1rem 0rem 1rem 0rem;   
         @include tablet  {
-            padding: 1.5rem;
+            padding: 2rem 0rem 0.75rem 0rem;
+            font-size: 2rem;
+        }
+        @include desktop  {
+            flex-flow: row wrap;
+            width: 1440px;
+            margin: auto;
+        }  
+    }
+    &__about {
+        display: flex;
+        flex-flow: column;
+        @include tablet  {
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @include desktop  {
+            width: 55rem;
         }
     }
-        // ask about limiting text legth //
-        // @include desktop  {
-        //     display: flex;
-        //     justify-content: center;
-        //     width: 100%;
-        //     max-width: 1440px;
-        // }
-    &__image {
-        padding: 1rem;
+    &__hero-image {
+        object-fit: cover;
+        vertical-align: bottom;
+        max-height: 50vw;
+        @include tablet  {
+            max-height:20rem;
+            max-width: 800px;
+        }
+        @include desktop  {
+            width: 55rem;
+            height: 29rem;
+            margin: auto;
+            max-height:unset;
+            max-width: unset;
+        }
+    }
+    &__quote {
+        font-size: 0.75rem;
+        margin-top: 24px;
+        @include tablet  {
+            font-size: 1.325rem;
+            line-height: 1.875rem;
+        }
+        @include tablet  {
+            width: 55rem;
+            margin: auto;
+        }
+    }
+    &__subheader {
+        margin-top: 40px;
         width: 100%;
+        @include tablet  {
+            width: 55rem;
+            margin: auto;
+        }
     }
     &__attribute {
-        padding-top: 40px;
-        font-size: 0.75rem;
+        position:relative;
+        top: 10px;
+        font-size: 0.65rem;
+        @include tablet  {
+            font-size: 0.85rem;
+        }
     }
+    &__text-block {   //gallery section
+        margin-top: 24px;
+        @include tablet  {
+            width: 48%;
+            margin-top: 24px;
+        }
+        @include tablet  {
+            // width: 55rem;
+            // margin: auto;
+        }
+    }
+    &__gallery {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        background-color: $alabaster;
+        margin-top: 2rem;
+        padding: 0rem 0.5rem 0rem 0.5rem;
+        @include tablet  {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 2.5rem 1.125rem 0rem 1.125rem;
+        }    
+    }
+    &__gallery-blocks {
+        display: flex;
+        flex-flow: column;
+        @include tablet {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 100%;
+        }        
+        @include desktop  {
+            flex-flow: row wrap;
+            max-width: 1440px;
+            margin: auto;
+        }  
+    }
+    &__container {
+        object-fit: cover;
+        vertical-align: bottom;
+        max-height: 100%;
+        height: 50vw;
+        margin: 0.75rem 0.25rem 0rem 0.25rem;
+        @include tablet  {
+            width: 31.5%;
+            height: 20vw;
+            margin: 0rem;
+            margin-top: 1.125rem;
+        }
+        @include desktop  {
+            width: 31.5%;
+            height: 15.575rem;
+            margin: 0rem;
+            margin-top: 1.125rem;
+        }
+    }
+}
+.position_relative {
+    position: relative;
+    top:0.5rem
 }

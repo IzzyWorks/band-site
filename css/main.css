@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-Medium.woff2") format("woff2"), url("AvenirNextLTPro-Medium.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-Medium.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-MediumIt.woff2") format("woff2"), url("AvenirNextLTPro-MediumIt.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-MediumIt.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-MediumIt.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-BoldIt.woff2") format("woff2"), url("AvenirNextLTPro-BoldIt.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-BoldIt.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-BoldIt.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-DemiIt.woff2") format("woff2"), url("AvenirNextLTPro-DemiIt.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-DemiIt.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-DemiIt.woff") format("woff");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-LightIt.woff2") format("woff2"), url("AvenirNextLTPro-LightIt.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-LightIt.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-LightIt.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -72,9 +72,25 @@
 
 @font-face {
   font-family: 'AvenirNext LT Pro';
-  src: url("AvenirNextLTPro-Light.woff2") format("woff2"), url("AvenirNextLTPro-Light.woff") format("woff");
+  src: url("../assets/Fonts/AvenirNextLTPro-Light.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext LT Pro';
+  src: url("../assets/Fonts/AvenirNextLTPro-Heavy.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext LT Pro';
+  src: url("../assets/Fonts/AvenirNextLTPro-HeavyIt.woff2") format("woff2"), url("../assets/Fonts/AvenirNextLTPro-HeavyIt.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -119,7 +135,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 0.5rem;
+  padding-top: 0.6rem;
   width: 100%;
 }
 
@@ -158,7 +174,11 @@
 
 .main-nav__btn-font {
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+
+.main-nav__btn-font--active {
   color: #fff;
 }
 
@@ -169,7 +189,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/assets/Images/concert-1.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(49, 59, 2, 0.411)), to(rgba(68, 1, 88, 0.459))), url(/assets/Images/concert-1.jpg);
+  background-image: linear-gradient(90deg, rgba(49, 59, 2, 0.411) 0%, rgba(68, 1, 88, 0.459) 100%), url(/assets/Images/concert-1.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -189,14 +210,24 @@
 }
 
 .hero__font {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
   padding: 1rem;
   color: #fff;
 }
 
 @media screen and (min-width: 768px) {
   .hero__font {
+    font-size: 3.25rem;
     padding: 1.5rem;
-    width: 100%;
+    width: 70%;
   }
 }
 
@@ -208,7 +239,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -221,7 +252,53 @@
 }
 
 .article {
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0rem 0.8125rem 0rem 0.8125rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    padding: 0rem 1.125rem 0rem 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+.article__font {
+  text-rendering: optimizeLegibility;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #323232;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article__font {
+    padding: 2rem 0rem 0.75rem 0rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article__font {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: 1440px;
+    margin: auto;
+  }
+}
+
+.article__about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,33 +309,192 @@
 }
 
 @media screen and (min-width: 768px) {
-  .article {
-    -webkit-box-orient: vertical;
+  .article__about {
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.article__font {
-  padding: 1rem;
-  color: #323232;
+@media screen and (min-width: 1440px) {
+  .article__about {
+    width: 55rem;
+  }
+}
+
+.article__hero-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+  max-height: 50vw;
 }
 
 @media screen and (min-width: 768px) {
-  .article__font {
-    padding: 1.5rem;
+  .article__hero-image {
+    max-height: 20rem;
+    max-width: 800px;
   }
 }
 
-.article__image {
-  padding: 1rem;
+@media screen and (min-width: 1440px) {
+  .article__hero-image {
+    width: 55rem;
+    height: 29rem;
+    margin: auto;
+    max-height: unset;
+    max-width: unset;
+  }
+}
+
+.article__quote {
+  font-size: 0.75rem;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .article__quote {
+    font-size: 1.325rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .article__quote {
+    width: 55rem;
+    margin: auto;
+  }
+}
+
+.article__subheader {
+  margin-top: 40px;
   width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .article__subheader {
+    width: 55rem;
+    margin: auto;
+  }
+}
+
 .article__attribute {
-  padding-top: 40px;
-  font-size: 0.75rem;
+  position: relative;
+  top: 10px;
+  font-size: 0.65rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article__attribute {
+    font-size: 0.85rem;
+  }
+}
+
+.article__text-block {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .article__text-block {
+    width: 48%;
+    margin-top: 24px;
+  }
+}
+
+.article__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  background-color: #FAFAFA;
+  margin-top: 2rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article__gallery {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2.5rem 1.125rem 0rem 1.125rem;
+  }
+}
+
+.article__gallery-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media screen and (min-width: 768px) {
+  .article__gallery-blocks {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article__gallery-blocks {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+.article__container {
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+  max-height: 100%;
+  height: 50vw;
+  margin: 0.75rem 0.25rem 0rem 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article__container {
+    width: 31.5%;
+    height: 20vw;
+    margin: 0rem;
+    margin-top: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article__container {
+    width: 31.5%;
+    height: 15.575rem;
+    margin: 0rem;
+    margin-top: 1.125rem;
+  }
+}
+
+.position_relative {
+  position: relative;
+  top: 0.5rem;
 }
 
 * {
@@ -295,7 +531,7 @@ ul {
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 2rem;
+  line-height: 1.75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -306,9 +542,9 @@ h1 {
 }
 
 h2 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: bold;
-  line-height: 1.375rem;
+  line-height: 1.25rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -328,6 +564,19 @@ h3 {
   h3 {
     font-size: 1.5rem;
     line-height: 2.75rem;
+  }
+}
+
+h4 {
+  font-size: 0.55rem;
+  font-weight: normal;
+  line-height: 0.95rem;
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 0.75rem;
+    line-height: 1.375rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

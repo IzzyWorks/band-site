@@ -21,7 +21,7 @@
     &__logo-block {
         display: flex;
         justify-content: center;
-        padding-top: 0.5rem;
+        padding-top: 0.6rem;
         width: 100%;
         @include tablet  {
             width: auto;  
@@ -45,7 +45,10 @@
 }
     &__btn-font {
         font-size: 0.75rem;
-        font-weight: 300;
+        font-weight: bold;
+        color: $silver;
+    }
+    &__btn-font--active {
         color: $white;
     }
 }
