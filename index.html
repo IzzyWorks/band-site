@@ -4,14 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Izzy's Band Site</title>
 </head>
 <body>
 
-<nav class="nav_bar">
-    <h1 class="nav_type">hello world</h1>
-    
+<!-- Site Nav -->
+<nav class="nav-container">
+    <ul class="main-nav">
+        <li class="main-nav__logo-block">
+            <a href="/"><img src="assets/Logo/Logo-bandsite.svg" alt="Bandsite logo"></a>
+        </li>
+        <li class="main-nav__btn main-nav__btn--active">
+            <a href="#"><h2 class="main-nav__btn-font main-nav__btn-font--active">Biography</h2></a>
+        </li>
+        <li class="main-nav__btn">
+            <a href="#"><h2 class="main-nav__btn-font">Shows</h2></a>
+        </li>
+    </ul>
 </nav>
-    
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero__container">
+        <h1 class="hero__font">Gaspard Auge & Xavier de Rosnay</h1>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section">
+    <h2 class="section__font">About the Musicians</h2>
+    <div class="section__about">
+        <img class="section__hero-image" src="assets/Images/Justice-O2-Brixton-Academy-credit-Guifre-de-Peray.jpg" alt="Xavier and Gaspard on stage">
+        
+        <h2 class="section__quote">”We are more comfortable with not fighting what comes naturally. 
+            Before we might have thought, 'We need to be smarter than this'”
+        <span class="section__attribute"><br>- Xavier de Rosnay</span></h2>
+
+        <h2 class="section__quote section__subheader">Xavier de Rosnay & Gaspard Augé</h2>
+
+        <div class="section__text-block">
+        <h4>Xavier De Rosnay and Gaspard Augé had a few mutual friends who happened t run a record lable, 
+            seeking tracks for a compilation. With an immediate connectiobn, 
+            the pair decided to try their hand at making a song. That's when they creatd their breakout single, 
+            We Are Your Friends - a feel-good, funk-filled, instant anthem that lost the remix content, 
+            but won the attention of Pedro Winter, director of the newlly founded Edd Banger Reords, 
+            who boasted Daft Punk as former clients. One week later, they in thsi office, signing a record deal.</h4></div>
+
+        <div class="section__text-block">
+        <h4>Xavier De Ronsay Gaspard Augé had a few mutual friends, who happened to run a record label, 
+            seeking track for a compilation. With an immediate connection, the pair decided to try their hand at making a song,
+            We Are Your Friends - a feel-good, funk-filled, instant anthem that lost the remix contest, 
+            but won the attention of Pedro Winter, director of the newly founded Ed Benger Records, 
+            who boasted Daft Punk as former cllients. One weeek later, they were in his office, signing a record deal.</h4></div>
+    </div>
+</section>
+
+<!-- Gallery -->
+
+<section class="section__gallery">
+    <h2 class="section__font position_relative">Photo Gallery</h2>
+    <div class="section__gallery-blocks">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-1.jpg" alt="generic sterotypical photo of people going crazy at a concert">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-2.jpg" alt="what if cats have their own internet and its full of us?">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-3.jpg" alt="yeet!!">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-4.jpg" alt="dude, our hands are perfect cup holders">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-5.jpg" alt="OMG, yessssss">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-6.jpg" alt="Mojitttoooooo">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-7.jpg" alt="one does not simply debug CSS">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-8.jpg" alt="FFFFFFFF for the DJ">
+        <img class="section__img-container" src="assets/Images/Photo-gallery-9.jpg" alt="git commit legit">
+    </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="footer__blocks">
+        <div class="footer__get-in-touch"><h2 class="footer__h2">Get In Touch</h2></div>
+        <div class="footer__social-media-icons">
+            <a href="#"><img class="footer__icons" src="assets/Icons/SVG/Icon-instagram.svg" alt="instagram social-media link"></a>
+            <a href="#"><img class="footer__icons" src="assets/Icons/SVG/Icon-facebook.svg" alt="facebook social-media link"></a>
+            <a href="#"><img class="footer__icons" src="assets/Icons/SVG/Icon-twitter.svg" alt="twitter social-media link"></a>
+        </div>
+        <div class="footer__empty"></div>
+        <img class="footer__logo" src="/assets/Logo/Logo-bandsite.svg" alt="site logo">
+    </div>
+    <div>
+    <ul class="footer__blocks">
+        <li class="footer__block"><h3 class="footer__h3">Richard Rovner<br>The Bees Knees Managment<br><br></h3>
+            <h4 class="footer__h4">460 King Street West<br>Toronto,Ontario M5V 1L7<br><a class="footer__h4 footer__email" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></h4></li>
+        <li class="footer__block"><h3 class="footer__h3">Marsha Vlasic<br>Artist Group International<br><br></h3>
+            <h4 class="footer__h4">Booking Agent for<br>US / South America / Japan<br><a class="footer__h4 footer__email" href="mailto:mersha.vlasic@artistgrp.com">mersha.vlasic@artistgrp.com</a></h4></li>
+        <li class="footer__block"><h3 class="footer__h3">Russel Warby<br>William Morrir Entertainment<br><br></h3>
+            <h4 class="footer__h4">Booking Agent for<br>UK / EU / AU<br><a class="footer__h4 footer__email" href="mailto:RLW@wmeentertainment.com">RLW@wmeentertainment.com</a></h4></li>
+        <li class="footer__block footer__empty"></li>
+    </ul>
+    <div class="footer__blocks"><h4 class="footer__h4 footer__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</h4></div>
+    </div>
+</footer>
 </body>
 </html>
