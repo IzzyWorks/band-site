@@ -5,12 +5,12 @@
     background-color: $black;
     width: 100%; 
     margin: auto;
-    padding: 2.25rem 0.5rem 1.5rem 0.8125rem;
+    padding: 2rem 0.8125rem 1.5rem 0.8125rem;
     @include tablet  {
-        padding: 0rem 1.125rem 0.5rem 1.125rem;   
-        }
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;   
+    }
     @include desktop  {
-        padding: 0.5rem 1.125rem 1rem 1.125rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;   
     }
 
     &__blocks {
@@ -18,105 +18,126 @@
         flex-flow: column; 
         width: 100%; 
         margin: auto;
+        @include mobile-intermidiate-footer-1 {
+            flex-flow: row wrap;
+        }
         @include tablet  {
-            flex-flow: row;   
-            }
+            flex-flow: row;  
+            justify-content: space-between; 
+        }
         @include desktop  {
             max-width: $desktop-breakpoint;
         }
     }
+    
+    &__block {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include mobile-intermidiate-footer-1 {
+            width: 33.33%;  
+            padding-right: 1.3132rem; 
+        }
+        @include mobile-intermidiate-footer-2 {
+            width: 33.33%; 
+            padding-right: 2.275rem; 
+        }
+        @include tablet  {
+            padding-right: 0rem; 
+        }
+        @include desktop  {
+            width: 25%; 
+        }
+    }   
+    &__empty {
+            display: none;
+            @include desktop  {
+                display: flex;
+                // width: 25%;
+            }
+    }  
+    &__copyright {
+        max-width: 9rem;
+        @include mobile-intermidiate-footer-1  {
+            max-width: unset;
+        }
+    } 
     &__get-in-touch {
         display: flex;
         font-size: 1.75rem;
         width: 100%; 
         @include tablet  {
-            width: 25%; 
-            }
+            padding-right: 2rem;
+            width: auto; 
+       }
         @include desktop  {
-            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+            width: 25%; 
         }
-    }
+    }   
     &__social-media-icons {
         display: flex;
         align-items: center;
         width: 100%;
         height: 4rem;
         @include tablet  {
+            width: 33.33%; 
+            margin-right: auto;
+        }
+        @include desktop  {
             width: 25%;   
-            }
-        @include desktop  {
-            // padding: 0.5rem 1.125rem 1rem 1.125rem;
         }
-    }
-    &__empty {
-        width: 100%;
-        @include tablet  {
-            width: 25%;  
-            }
-        @include desktop  {
-            // padding: 0.5rem 1.125rem 1rem 1.125rem;
-        }
-    }
+    }   
     &__logo {
         display: none;
-        width: 100%;
-        height: 1.5rem;
-        margin: 0.5rem;
         @include tablet  {
             display: flex;
-            width: 25%;  
-            }
-        @include desktop  {
-            // padding: 0.5rem 1.125rem 1rem 1.125rem;
-        }
-    }
-    &__block {
-        width: 100%;
-        margin-bottom: 1rem;
-        @include tablet  {
-            width: 25%;  
-            }
-        @include desktop  {
-            // padding: 0.5rem 1.125rem 1rem 1.125rem;
-        }
-    }
-    &__copyright {
-        width: 100%;
-        @include tablet  {
-            // width: 25%;  
-            }
-        @include desktop  {
-            // padding: 0.5rem 1.125rem 1rem 1.125rem;
-        }
+            margin-left: auto;
+       }
     }
     &__icons {
         margin: 0rem 1.75rem 0rem 0rem;
     }
+
     &__h2 {
         position: relative;
         right: 0.25rem;
-        font-size: 1.875rem; 
-            }
-        @include desktop  {
+        font-size: 1.75rem; 
+        @include tablet  {
+            padding-top: 0.4rem;
         }
+        @include desktop  {
+            font-size: 1.75rem;
+        }
+    }
     &__h3 {
         position: relative;
         right: 0.25rem;
         font-size: 0.65rem;
         line-height: 1rem; 
-            }
-        @include desktop  {
+        @include mobile-intermidiate-footer-1  {
+            font-size: 0.75rem; 
         }
+        @include desktop  {
+            font-size: 0.64rem;
+        }
+    }
     &__h4 {
         position: relative;
         right: 0.25rem;
         font-size: 0.55rem;
         font-weight: normal;
         line-height: 0.8rem; 
-            }
+        @include mobile-intermidiate-footer-1  {
+            font-size: 0.5rem; 
+        }
+        @include mobile-intermidiate-footer-2  {
+            font-size: 0.55rem; 
+        }
+        @include tablet  {
+            font-size: 0.675rem;
+            line-height: 1.025rem; 
+        }
         @include desktop  {
+            line-height: 0.85rem; 
         }
     }
-    
-
-
+}
