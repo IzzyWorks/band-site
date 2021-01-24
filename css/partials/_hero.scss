@@ -22,27 +22,22 @@
         padding: 1rem;
         color: $white;   
         @include tablet  {
-            font-size: 3.25rem;
+            font-size: 3.0125rem;
             padding: 1.5rem;
             width: 70%;       
         }
         @include desktop  {
             display: flex;
             justify-content: center;
+            position: relative;
+            bottom: 1.75rem;
             width: 50%;
-            // max-width: 1440px;
         }
-}
+    }
     &__container {
-        // padding: 1rem;
-        // color: $white;   
-        // @include tablet  {
-        //     padding: 1.5rem;
-
         @include desktop  {
             width: 100%;
-            max-width: 1440px;
+            max-width: $desktop-breakpoint;
             margin: auto;
-
     }
 }}

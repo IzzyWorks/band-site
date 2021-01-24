@@ -1,0 +1,122 @@
+.footer {
+    display: flex; 
+    flex-flow: column;
+    color: $white; 
+    background-color: $black;
+    width: 100%; 
+    margin: auto;
+    padding: 2.25rem 0.5rem 1.5rem 0.8125rem;
+    @include tablet  {
+        padding: 0rem 1.125rem 0.5rem 1.125rem;   
+        }
+    @include desktop  {
+        padding: 0.5rem 1.125rem 1rem 1.125rem;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-flow: column; 
+        width: 100%; 
+        margin: auto;
+        @include tablet  {
+            flex-flow: row;   
+            }
+        @include desktop  {
+            max-width: $desktop-breakpoint;
+        }
+    }
+    &__get-in-touch {
+        display: flex;
+        font-size: 1.75rem;
+        width: 100%; 
+        @include tablet  {
+            width: 25%; 
+            }
+        @include desktop  {
+            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+        }
+    }
+    &__social-media-icons {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        @include tablet  {
+            width: 25%;   
+            }
+        @include desktop  {
+            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+        }
+    }
+    &__empty {
+        width: 100%;
+        @include tablet  {
+            width: 25%;  
+            }
+        @include desktop  {
+            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+        }
+    }
+    &__logo {
+        display: none;
+        width: 100%;
+        height: 1.5rem;
+        margin: 0.5rem;
+        @include tablet  {
+            display: flex;
+            width: 25%;  
+            }
+        @include desktop  {
+            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+        }
+    }
+    &__block {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include tablet  {
+            width: 25%;  
+            }
+        @include desktop  {
+            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+        }
+    }
+    &__copyright {
+        width: 100%;
+        @include tablet  {
+            // width: 25%;  
+            }
+        @include desktop  {
+            // padding: 0.5rem 1.125rem 1rem 1.125rem;
+        }
+    }
+    &__icons {
+        margin: 0rem 1.75rem 0rem 0rem;
+    }
+    &__h2 {
+        position: relative;
+        right: 0.25rem;
+        font-size: 1.875rem; 
+            }
+        @include desktop  {
+        }
+    &__h3 {
+        position: relative;
+        right: 0.25rem;
+        font-size: 0.65rem;
+        line-height: 1rem; 
+            }
+        @include desktop  {
+        }
+    &__h4 {
+        position: relative;
+        right: 0.25rem;
+        font-size: 0.55rem;
+        font-weight: normal;
+        line-height: 0.8rem; 
+            }
+        @include desktop  {
+        }
+    }
+    
+
+

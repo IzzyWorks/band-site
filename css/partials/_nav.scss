@@ -15,7 +15,7 @@
             align-content: flex-end;
         }
         @include desktop {
-            max-width: 1440px;
+            max-width: $desktop-breakpoint;
         }
 }
     &__logo-block {
