@@ -1,4 +1,4 @@
-.article {
+.section {
     padding: 0.25rem 0.8125rem 0rem 0.8125rem;
     @include tablet  {
         padding: 0rem 1.125rem 0.5rem 1.125rem;
@@ -134,7 +134,7 @@
             margin: auto;
         }  
     }
-    &__container {
+    &__img-container {
         object-fit: cover;
         vertical-align: bottom;
         max-height: 100%;
@@ -152,6 +152,10 @@
             margin: 0rem;
             margin-top: 1.125rem;
         }
+    }
+    &__img-container:hover {
+        filter: grayscale(100);
+        transition: 0.5s;
     }
 }
 .position_relative {

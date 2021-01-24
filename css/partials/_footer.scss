@@ -32,7 +32,7 @@
     
     &__block {
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 1.65rem;
         @include mobile-intermidiate-footer-1 {
             width: 33.33%;  
             padding-right: 1.3132rem; 
@@ -43,6 +43,7 @@
         }
         @include tablet  {
             padding-right: 0rem; 
+            margin-bottom: 2.25rem;
         }
         @include desktop  {
             width: 25%; 
@@ -52,7 +53,6 @@
             display: none;
             @include desktop  {
                 display: flex;
-                // width: 25%;
             }
     }  
     &__copyright {
@@ -133,11 +133,17 @@
             font-size: 0.55rem; 
         }
         @include tablet  {
+            font-weight: 100;
             font-size: 0.675rem;
             line-height: 1.025rem; 
         }
         @include desktop  {
             line-height: 0.85rem; 
         }
+    }
+    &__email {
+        position: relative;
+        top: 0.75rem;
+        left: 0.05rem;
     }
 }
