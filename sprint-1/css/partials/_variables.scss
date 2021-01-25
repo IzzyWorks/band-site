@@ -1,5 +1,3 @@
-$tablet-outside-gutter: 24px;
-
 $black: #323232;
 $white:#fff;
 $silver:#AFAFAF;
@@ -8,9 +6,11 @@ $alabaster:#FAFAFA;
 
 
 $tablet-breakpoint: 768px;
+
 $desktop-breakpoint: 1440px;
 
-//added this media-break-point to improve footer transition
+//added these media-break-points to improve footer responsivness
+
 $mobile-footer-breakpoint-1: 500px;  
 
 $mobile-footer-breakpoint-2: 600px;  

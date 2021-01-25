@@ -4,20 +4,20 @@
 }
 .main-nav {
     & {
-        display: flex;
-        flex-flow: row wrap;
-        align-content:space-between;
-        background-color: $black;
-        height: 80px;
-        margin: 0 auto; 
-        @include tablet  {
-            padding: 0 $tablet-outside-gutter 0 $tablet-outside-gutter;     
-            align-content: flex-end;
+    display: flex;
+    flex-flow: row wrap;
+    align-content:space-between;
+    background-color: $black;
+    height: 80px;
+    margin: 0 auto; 
+    @include tablet  {
+        padding: 0rem 2rem 0rem 2rem;     
+        align-content: flex-end;
         }
-        @include desktop {
-            max-width: $desktop-breakpoint;
+    @include desktop {
+        max-width: $desktop-breakpoint;
         }
-}
+    }
     &__logo-block {
         display: flex;
         justify-content: center;
@@ -28,7 +28,7 @@
             margin-right: 4rem;
             margin-bottom: 20px;
             }
-}
+    }
     &__btn {
         display: flex;
         justify-content: center;
@@ -39,10 +39,10 @@
             width: auto;  
             margin-right: 4rem;
             }
-        &--active {
-            border-bottom: solid 5px $white;
-            }
-}
+    &--active {
+        border-bottom: solid 5px $white;
+        }
+    }
     &__btn-font {
         font-size: 0.75rem;
         font-weight: bold;
