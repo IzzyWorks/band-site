@@ -198,6 +198,105 @@
   }
 }
 
+.message-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.message-form__header {
+  font-family: AvenirNext LT Pro;
+  font-weight: 700;
+  width: 100%;
+  color: #323232;
+  font-size: 2.25rem;
+}
+
+.message-form__header--font {
+  font-size: 2rem;
+}
+
+.message-form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.message-form__avatar {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: url(../Images/Mohan-muruge.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 48px;
+  width: 48px;
+  border-radius: 24px;
+}
+
+.message-form__fill-out-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.message-form__lables {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+}
+
+.message-form__name-field {
+  border: solid 2px gray;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.message-form__comment-field {
+  width: 100%;
+  border: solid 1px lightgray;
+  border-radius: 2px;
+}
+
+.message-form__btn {
+  width: 160px;
+  height: 48px;
+  background-color: #323232;
+  color: white;
+  font-size: 1rem;
+}
+
 .music-player {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,6 +427,23 @@
       -ms-flex-align: space-between;
           align-items: space-between;
   width: 80%;
+}
+
+.showsList {
+  background-color: violet;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  width: 100%;
+}
+
+.showsList__event {
+  padding: 0.625rem 1.25rem;
+}
+
+.showsList__event--active, .showsList__event:hover {
+  border-bottom: 2px solid #white;
 }
 
 .section__container {
@@ -865,7 +981,6 @@
   font-size: 16pt;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: dotted 1px gray;
 }
 
 h1,

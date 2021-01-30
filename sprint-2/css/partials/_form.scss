@@ -1,0 +1,69 @@
+.message-form {
+  & {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    margin: 0 auto;
+    max-width: $desktop-breakpoint;
+  }
+  &__header {
+    font-family: AvenirNext LT Pro;
+    font-weight: 700;
+    width: 100%;
+    color: $black;
+    font-size: 2.25rem;
+    // align-items: flex-start;
+  }
+  &__header--font {
+    font-size: 2rem;
+  }
+  &__container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    margin: 0 auto;
+  }
+  &__avatar {
+    justify-content: left;
+    align-items: flex-start;
+    background-image: url(../Images/Mohan-muruge.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+  }
+  &__fill-out-form {
+    display: flex;
+    flex-flow: column;
+    justify-content: stretch;
+    padding-left: 10px;
+    width: 100%;
+  }
+  &__lables {
+    color: $silver;
+    font-size: 0.875rem;
+  }
+  &__name-field {
+    border: solid 2px $silveray;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+  }
+  &__comment-field {
+    //must add focus blur styles
+    width: 100%;
+    border: solid 2px $silveray;
+    border-radius: 2px;
+  }
+  &__btn {
+    width: 160px;
+    height: 48px;
+    background-color: $black;
+    color: white;
+    font-size: 1rem;
+  }
+}
