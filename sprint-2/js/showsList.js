@@ -51,7 +51,7 @@ const showListGrouping = document.getElementById('showsList');
 function appendShows() {
     showListGrouping.innerHTML = ""; 
 
-    for (let i = 0; i < listOfShowEvents.length - 1; i++) {
+    for (let i = 0; i < listOfShowEvents.length; i++) {
       const showObj = listOfShowEvents[i];
 
       const showListItem = document.createElement("li");
