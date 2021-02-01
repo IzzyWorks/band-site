@@ -40,7 +40,10 @@ function appendCommentBlock() {
     commentBlockLi.classList.add('message-form__comment-block');
 
     const containerAvatar = document.createElement('div');
-    containerAvatar.classList.add('message-form__avatar');
+    containerAvatar.classList.add('message-form__avatar-container');
+    
+    const Avatar = document.createElement('div');
+    Avatar.classList.add('message-form__avatar');
 
     const containerUserName = document.createElement('div');
     containerUserName.classList.add('message-form__container--user');
@@ -64,6 +67,7 @@ function appendCommentBlock() {
     postComments.innerText = commentObj.addComment;
 
     commentBlockLi.appendChild(containerAvatar);
+    containerAvatar.appendChild(Avatar);
     commentBlockLi.appendChild(containerUserName);
     containerUserName.appendChild(userName);
     commentBlockLi.appendChild(containerDate);
@@ -102,5 +106,3 @@ function handleFormSubmit(event) {
       appendCommentBlock();
     }
 };
-
-// appendCommentBlock();

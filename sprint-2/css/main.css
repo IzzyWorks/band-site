@@ -127,7 +127,7 @@
 .main-nav__btn-font {
   font-size: 0.75rem;
   font-weight: bold;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 
 .main-nav__btn-font--active {
@@ -217,6 +217,7 @@
   width: 100%;
   color: #323232;
   font-size: 2.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .message-form__header--font {
@@ -241,20 +242,28 @@
   margin: 0 auto;
 }
 
-.message-form__avatar {
+.message-form__avatar-container {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-image: url(../Images/Mohan-muruge.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 48px;
-  width: 48px;
-  border-radius: 24px;
+  width: 4.65rem;
+}
+
+.message-form__avatar {
+  background-color: gray;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3rem;
+  margin-top: 1.15rem;
 }
 
 .message-form__fill-out-form {
@@ -265,36 +274,85 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  padding-left: 10px;
   width: 100%;
 }
 
 .message-form__lables {
-  color: #AFAFAF;
-  font-size: 0.875rem;
+  color: #afafaf;
+  font-weight: 500;
+  font-size: 0.65rem;
 }
 
 .message-form__name-field {
-  border: solid 2px gray;
+  font-family: "AvenirNext LT Pro", Roboto;
+  color: #e1e1e1;
+  border: solid 2px #afafaf;
+  font-size: 0.85rem;
+  padding-left: 0.5rem;
   width: 100%;
+  height: 2.75rem;
   border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+}
+
+.message-form__name-field:focus {
+  border: solid 4px #323232;
+  color: #323232;
+  outline: none;
+  background-color: #fff;
 }
 
 .message-form__comment-field {
+  font-size: 0.85rem;
+  font-family: "AvenirNext LT Pro", Roboto;
   width: 100%;
-  border: solid 1px lightgray;
-  border-radius: 2px;
+  min-height: 120px;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  border: solid 2px #afafaf;
+  background-color: #fafafa;
+  height: 2.75rem;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.message-form__comment-field:focus {
+  border: solid 4px #323232;
+  outline: none;
+  background-color: #fff;
+}
+
+.message-form__btn-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .message-form__btn {
-  width: 160px;
-  height: 48px;
+  width: 10rem;
+  height: 3rem;
   background-color: #323232;
   color: white;
   font-size: 1rem;
+  border-radius: 0.256rem;
+  margin-top: 1rem;
+  border: 0;
+  outline: none;
+}
+
+.message-form__btn:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.user-mohan {
+  background-image: url(../Images/Mohan-muruge.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .music-player {
@@ -427,23 +485,6 @@
       -ms-flex-align: space-between;
           align-items: space-between;
   width: 80%;
-}
-
-.showsList {
-  background-color: violet;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 20px;
-  width: 100%;
-}
-
-.showsList__event {
-  padding: 0.625rem 1.25rem;
-}
-
-.showsList__event--active, .showsList__event:hover {
-  border-bottom: 2px solid #white;
 }
 
 .section__container {
@@ -622,7 +663,7 @@
       -ms-flex-flow: column;
           flex-flow: column;
   width: 100%;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   margin-top: 2rem;
   padding: 0rem 0.5rem 1.975rem 0.5rem;
 }
@@ -990,7 +1031,7 @@ h4,
 li,
 a,
 p {
-  font-family: 'AvenirNext LT Pro', Roboto;
+  font-family: "AvenirNext LT Pro", Roboto;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
