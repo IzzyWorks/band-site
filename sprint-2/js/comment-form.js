@@ -24,7 +24,7 @@ const listPostedComments = [
 
 // global variables
 
-const buttonEvent = document.querySelector('.message-form__fill-out-form');
+const buttonEvent = document.querySelector('.form__fill-out-form');
 const commentsBlock = document.getElementById('commetBlock'); 
 
 // populate the page with stored array
@@ -36,47 +36,67 @@ function appendCommentBlock() {
     for (let i = 0; i < listPostedComments.length; i++) {
       const commentObj = listPostedComments[i];
 
-    const commentBlockLi = document.createElement('li');
-    commentBlockLi.classList.add('message-form__comment-block');
+    // content
 
-    const containerAvatar = document.createElement('div');
-    containerAvatar.classList.add('message-form__avatar-container');
-    
     const Avatar = document.createElement('div');
-    Avatar.classList.add('message-form__avatar');
-
-    const containerUserName = document.createElement('div');
-    containerUserName.classList.add('message-form__container--user');
+    Avatar.classList.add('form__avatar-small');
 
     const userName = document.createElement('h2');
-    userName.classList.add('message-form__user-name');
+    userName.classList.add('form__user-name');
     userName.innerText = commentObj.inputName;
 
-    const containerDate = document.createElement('div');
-    containerDate.classList.add('message-form__container--date');
-
     const postDate = document.createElement('h4');
-    postDate.classList.add('message-form__date');
+    postDate.classList.add('form__date');
     postDate.innerText = commentObj.inputDate;
 
-    const containerComments = document.createElement('div');
-    containerComments.classList.add('message-form__container--comments');
-
     const postComments = document.createElement('p');
-    postComments.classList.add('message-form__user-name');
+    postComments.classList.add('form__comments');
     postComments.innerText = commentObj.addComment;
 
-    commentBlockLi.appendChild(containerAvatar);
-    containerAvatar.appendChild(Avatar);
-    commentBlockLi.appendChild(containerUserName);
-    containerUserName.appendChild(userName);
-    commentBlockLi.appendChild(containerDate);
-    containerDate.appendChild(postDate);
-    commentBlockLi.appendChild(containerComments);
-    containerComments.appendChild(postDate);
-    commentBlockLi.appendChild(postComments);
+    // container divs
 
-    commentsBlock.appendChild(commentBlockLi);
+    const containerAvatar = document.createElement('div');
+    containerAvatar.classList.add('form__container--avatar');
+
+    const containerUserName = document.createElement('div');
+    containerUserName.classList.add('form__container--user');
+
+    const containerDate = document.createElement('div');
+    containerDate.classList.add('form__container--date');
+
+    const containerComments = document.createElement('div');
+    containerComments.classList.add('form__container--comments');
+
+    // flex containers
+
+    const userDateBlock = document.createElement('div');
+    userDateBlock.classList.add('form__block--user-date');
+
+    const userDateCommentBlock = document.createElement('div');
+    userDateCommentBlock.classList.add('form__block--user-date-comment');
+
+    const postBlockLi = document.createElement('li');
+    postBlockLi.classList.add('form__block--post');
+
+    // append
+    
+    containerAvatar.appendChild(Avatar);
+    containerUserName.appendChild(userName);
+    containerDate.appendChild(postDate);
+    containerComments.appendChild(postComments);
+
+    userDateBlock.appendChild(containerUserName);
+    userDateBlock.appendChild(containerDate);
+
+
+    userDateCommentBlock.appendChild(userDateBlock);
+    userDateCommentBlock.appendChild(containerComments);
+
+
+    postBlockLi.appendChild(containerAvatar);
+    postBlockLi.appendChild(userDateCommentBlock);
+
+    commentsBlock.appendChild(postBlockLi);
     }
 };
 

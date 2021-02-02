@@ -1,78 +1,70 @@
-.message-form {
+.form {
   & {
     display: flex;
-    width: 100%;
     flex-flow: column;
-    margin: 0 auto;
-    max-width: $desktop-breakpoint;
+    justify-content: center;
+    width: 100%;
+    padding: 0rem 0.65rem 0rem 0.65rem;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    @include desktop {
+      margin: 4rem auto;
+      max-width: $desktop-breakpoint;
+    }
   }
+
   &__header {
     font-family: AvenirNext LT Pro;
     font-weight: 700;
     width: 100%;
     color: $black;
-    font-size: 2.25rem;
-    margin-bottom: 2.25rem;
-    // align-items: flex-start;
-  }
-  &__header--font {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    @include tablet {
+      font-size: 1.55rem;
+      padding: 0rem 0rem 0rem 1.25rem;
+    }
   }
   &__container {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 60%;
-    margin: 0 auto;
+    border-bottom: solid 1px $mercury;
+    @include tablet {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
-  &__avatar-container {
-    justify-content: left;
-    align-items: flex-start;
-    width: 4.65rem;
-  }
-  &__avatar {
-    background-color: gray;
-    justify-content: left;
-    align-items: flex-start;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 3rem;
-    margin-top: 1.15rem;
-  }
+
   &__fill-out-form {
     display: flex;
     flex-flow: column;
     width: 100%;
   }
-  &__lables {
-    color: $silver;
-    font-weight: 500;
-    font-size: 0.65rem;
-  }
+
   &__name-field {
     font-family: "AvenirNext LT Pro", Roboto;
     color: $mercury;
-    border: solid 2px $silver;
-    font-size: 0.85rem;
+    border: solid 2px $black;
+    font-size: 0.65rem;
     padding-left: 0.5rem;
     width: 100%;
-    height: 2.75rem;
+    height: 2.5rem;
     border-radius: 4px;
     margin-bottom: 1rem;
     background-color: $alabaster;
   }
+
   &__name-field:focus {
-    border: solid 4px $black;
+    border: solid 2px $black;
     color: $black;
     outline: none;
     background-color: $white;
   }
+
   &__comment-field {
-    font-size: 0.85rem;
+    font-size: 0.65rem;
     font-family: "AvenirNext LT Pro", Roboto;
     width: 100%;
-    // max-width: 630px;
     min-height: 120px;
     padding-top: 0.5rem;
     padding-left: 0.5rem;
@@ -82,28 +74,117 @@
     border-radius: 4px;
     resize: vertical;
   }
+
   &__comment-field:focus {
-    border: solid 4px $black;
+    border: solid 2px $black;
     outline: none;
     background-color: $white;
   }
-  &__btn-container {
-    display: grid;
-    justify-content: end;
+
+  &__lables {
+    font-size: 0.55rem;
+    color: $silver;
   }
+
+  &__btn-container {
+    display: flex;
+    margin-bottom: 1.125rem;
+    @include tablet {
+      display: grid;
+      justify-content: end;
+      margin-bottom: 1.125rem;
+    }
+  }
+
   &__btn {
-    width: 10rem;
-    height: 3rem;
+    width: 100%;
+    height: 2.25rem;
     background-color: $black;
     color: white;
-    font-size: 1rem;
+    font-size: 0.65rem;
     border-radius: 0.256rem;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     border: 0;
     outline: none;
+    @include tablet {
+      width: 7.5rem;
+      height: 2.25rem;
+    }
   }
+
   &__btn:hover {
-    transform: scale(1.01);
+    transform: scale(0.99);
+  }
+
+  &__avatar {
+    background-color: gray;
+    justify-content: left;
+    align-items: flex-start;
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 3rem;
+    margin: 1.275rem 0.85rem 0rem 0rem;
+  }
+
+  &__avatar-small {
+    background-color: $mercury;
+    justify-content: left;
+    align-items: flex-start;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 3rem;
+    margin: 1rem 0.85rem 0rem 0rem;
+  }
+
+  &__user-name {
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.75rem;
+  }
+  &__date {
+    display: flex;
+    justify-content: end;
+    font-size: 0.625rem;
+    padding-left: 0.35rem;
+    color: $silver;
+  }
+
+  &__comments {
+    font-size: 0.6rem;
+  }
+  &__container--date {
+    justify-content: flex-end;
+    @include tablet {
+      justify-content: flex-start;
+      padding-left: 0.35rem;
+    }
+  }
+  &__block--post {
+    display: flex;
+    flex-flow: row;
+    padding: 0rem 0rem 0.875rem 0rem;
+    border-bottom: solid 1px $mercury;
+    @include desktop {
+      margin: 1.75rem auto;
+    }
+  }
+
+  &__block--user-date {
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    @include tablet {
+      justify-content: flex-start;
+    }
+  }
+
+  &__block--user-date-comment {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
   }
 }
 .user-mohan {
