@@ -71,15 +71,24 @@ function appendShows() {
 
       const lableDates = document.createElement("h4");
       lableDates.classList.add("shows__lable");
-      lableDates.innerText = 'Dates';
+      lableDates.innerText = 'DATES';
 
       const lableVenue = document.createElement("h4");
       lableVenue.classList.add("shows__lable");
-      lableVenue.innerText = 'Venue';
+      lableVenue.innerText = 'VENUE';
 
       const lableLocation = document.createElement("h4");
       lableLocation.classList.add("shows__lable");
-      lableLocation.innerText = 'Location';
+      lableLocation.innerText = 'LOCATION';
+
+      const buyButton = document.createElement("div");
+      buyButton.classList.add("shows__buy-btn");
+
+      const buttonText = document.createElement("div");
+      buttonText.classList.add("shows__btn-text");
+      buttonText.innerText = 'BUY TICKETS';
+
+
 
       showListItem.appendChild(lableDates);
       showListItem.appendChild(showDate);
@@ -87,6 +96,8 @@ function appendShows() {
       showListItem.appendChild(showVenue);
       showListItem.appendChild(lableLocation);
       showListItem.appendChild(showLocation);
+      showListItem.appendChild(buyButton);
+      buyButton.appendChild(buttonText);
       showListGrouping.appendChild(showListItem);
     }
   };

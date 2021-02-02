@@ -9,9 +9,9 @@
     url(/sprint-2/Images/Mohan-muruge.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 472px;
+  // height: 472px;
   @include tablet {
-    height: 472px;
+    // height: 472px;
   }
   @include desktop {
     height: 670px;
@@ -28,13 +28,29 @@
       margin: auto;
     }
   }
+  &__cta-subheader {
+    color: $white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2rem 1rem 0rem 1rem;
+    @include tablet {
+      font-size: 1.35rem;
+    }
+    @include desktop {
+      position: relative;
+      bottom: 1.75rem;
+    }
+  }
   &__cta-text {
     color: $white;
-    font-size: 1.25rem;
+    font-size: 1.85rem;
+    line-height: 2.25rem;
     font-weight: 700;
-    padding: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     @include tablet {
+      width: 70%;
       font-size: 3.0125rem;
+      line-height: 3.875rem;
     }
     @include desktop {
       position: relative;
@@ -42,24 +58,47 @@
     }
   }
   &__iframe {
-    padding: 1rem;
+    padding: 2.5rem 1rem 2rem 1rem;
     width: 100%;
+    height: 9.25rem;
+    @include tablet {
+      width: 22.5rem;
+      height: 11.5rem;
+      justify-content: flex-start;
+      margin: 0rem 0rem 2.25rem 0rem;
+    }
     @include desktop {
       padding: unset;
       justify-content: flex-end;
       width: 50%;
-      margin: 0rem 2rem 0rem 0rem;
     }
   }
 }
 .shows {
   &__container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column;
     justify-content: space-between;
-    // padding: 0.25rem 0.8125rem 0rem 0.8125rem;
+    padding: 1rem 0.8125rem 0rem 0.8125rem;
     @include tablet {
-      // padding: 0rem 1.125rem 0.5rem 1.125rem;
+      flex-flow: column;
+      justify-content: space-between;
+      padding: 1rem 0.8125rem 0rem 0.8125rem;
+    }
+    @include desktop {
+      // padding: 0.5rem 1.125rem 1rem 1.125rem;
+      width: 100%;
+      max-width: $desktop-breakpoint;
+      margin: auto;
+      margin: 4rem;
+    }
+  }
+  &__header-container {
+    @include tablet {
+      display: flex;
+      flex-flow: row;
+      width: 100%;
+      // padding: 1rem 0.8125rem 0rem 0.8125rem;
     }
     @include desktop {
       // padding: 0.5rem 1.125rem 1rem 1.125rem;
@@ -72,28 +111,55 @@
   &__header {
     display: flex;
     justify-content: flex-start;
-    font-size: 3.2rem;
+    font-size: 1.25rem;
+    @include tablet {
+      font-size: 2.125rem;
+    }
   }
   &__venues {
     display: flex;
     flex-flow: column;
     align-items: space-between;
-    width: 80%;
+  }
+  &__list-item {
+    @include tablet {
+      display: flex;
+      flex-flow: row nowrap;
+      // justify-content: space-between;
+    }
+  }
+  &__lable {
+    @include tablet {
+      display: none;
+    }
+  }
+  &__buy-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 2.25rem;
+    background-color: $black;
+    border-radius: 0.256rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1.125rem;
+    border: 0;
+    outline: none;
+    @include tablet {
+      width: 7.5rem;
+      height: 2.25rem;
+    }
+  }
+  &__btn-text {
+    color: white;
+    font-size: 0.75rem;
+    @include tablet {
+      width: 7.5rem;
+      height: 2.25rem;
+    }
   }
 }
 
-// .showsList {
-//     background-color: violet;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//     height: 20px;
-//     width: 100%;
-//     &__event {
-//         padding: 0.625rem 1.25rem;
-//         &--active,
-//         &:hover {
-//         border-bottom: 2px solid #white;
-//         }
-//     }
-//     }
+// &__btn:hover {
+//   transform: scale(0.99);
+// }
