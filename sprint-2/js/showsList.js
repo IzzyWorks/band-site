@@ -58,7 +58,7 @@ function appendShows() {
       showListItem.classList.add("shows__list-item");
 
       const showDate = document.createElement("h2");
-      showDate.classList.add("shows__dates");
+      showDate.classList.add("shows__date");
       showDate.innerText = showObj.dates;
 
       const showVenue = document.createElement("h2");
@@ -71,7 +71,7 @@ function appendShows() {
 
       const lableDates = document.createElement("h4");
       lableDates.classList.add("shows__lable");
-      lableDates.innerText = 'DATES';
+      lableDates.innerText = 'DATE';
 
       const lableVenue = document.createElement("h4");
       lableVenue.classList.add("shows__lable");
