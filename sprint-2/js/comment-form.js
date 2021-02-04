@@ -8,18 +8,18 @@ const listPostedComments = [
     {
     inputName: 'Micheal Lyons',
     inputDate: '12/18/2018',
-    addComment: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going This is still simply the greatest opening of a concert I have EVER witnessed.'
+    addComment: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going This is still simply the greatest opening of a concert I have EVER witnessed.',
     },
     {
     inputName: 'Gary Wong',
     inputDate: '12/12/2018',
-    addComment: 'Every time I see his shred I feel so motivated to get off my couch and hop on my board. He\'s so talanted!.'
+    addComment: 'Every time I see his shred I feel so motivated to get off my couch and hop on my board. He\'s so talanted!.',
     },
     {
     inputName: 'Theodore Ducan',
     inputDate: '11/15/2018',
-    addComment: 'How can someone be so good!!!'
-    },
+    addComment: 'How can someone be so good!!!',
+    }
 ];
 
 // global variables
@@ -31,11 +31,12 @@ const commentsBlock = document.getElementById('commetBlock');
 // Append Post to DOM, formate structure
 
 function appendCommentBlock() {
-    commentsBlock.innerHTML = ""; 
+    commentsBlock.innerHTML = "";
+
 
     for (let i = 0; i < listPostedComments.length; i++) {
       const commentObj = listPostedComments[i];
-
+    
     // content
 
     const Avatar = document.createElement('div');
@@ -100,13 +101,12 @@ function appendCommentBlock() {
     }
 };
 
-appendCommentBlock();
+appendCommentBlock(); 
 
 // Submit Event
 
-buttonEvent.addEventListener('submit', handleFormSubmit);
 
-// console.log(buttonEvent);
+buttonEvent.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -120,9 +120,16 @@ function handleFormSubmit(event) {
     } else if (addComment === '') {
         alert('Please add a comment');
     } else {
-      listPostedComments.push({inputName, inputDate, addComment});
-      console.log(listPostedComments)
-      event.target.reset(); 
+      listPostedComments.unshift({inputName, inputDate, addComment});
+      
+      event.target.reset();
       appendCommentBlock();
     }
 };
+
+
+// function conditionalDate() {
+
+//     for (let i = 0; i < listPostedComments.length; i++) {
+//       const commentObj = listPostedComments[i];
+//     }

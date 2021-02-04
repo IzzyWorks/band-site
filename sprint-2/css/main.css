@@ -227,12 +227,12 @@
   width: 100%;
   color: #323232;
   font-size: 1.25rem;
+  padding: 0rem 0rem 1.5rem 0rem;
 }
 
 @media screen and (min-width: 768px) {
   .form__header {
     font-size: 1.55rem;
-    padding: 0rem 0rem 0rem 1.25rem;
   }
 }
 
@@ -250,13 +250,13 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border-bottom: solid 1px #e1e1e1;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .form__container {
     width: 60%;
-    margin: 0 auto;
+    margin: 1rem auto 1.25rem auto;
   }
 }
 
@@ -311,6 +311,27 @@
   background-color: #fff;
 }
 
+.form__posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: solid 1px #e1e1e1;
+}
+
+@media screen and (min-width: 768px) {
+  .form__posts {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
 .form__lables {
   font-size: 0.55rem;
   color: #afafaf;
@@ -320,7 +341,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1.125rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -330,7 +350,6 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    margin-bottom: 1.125rem;
   }
 }
 
@@ -431,14 +450,9 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
+  width: 100%;
   padding: 0rem 0rem 0.875rem 0rem;
-  border-bottom: solid 1px #e1e1e1;
-}
-
-@media screen and (min-width: 1240px) {
-  .form__block--post {
-    margin: 1.75rem auto;
-  }
+  border-top: solid 1px #e1e1e1;
 }
 
 .form__block--user-date {

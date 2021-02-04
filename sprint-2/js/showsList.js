@@ -8,7 +8,8 @@ const listOfShowEvents = [
     {
     dates: 'Mon Dec 17 2018',
     venue: 'Roland Lane',
-    location: 'San Franasisco, CA'
+    location: 'San Franasisco, CA',
+    hiddenFeild: 'Tue Mar 24 2015 17:00:00 GMT-0700 (PDT)'
     },
 
     {
@@ -41,8 +42,6 @@ const listOfShowEvents = [
     location: 'San Franasisco, CA'
     },
 ];
-
-
 
 const showListGrouping = document.getElementById('showsList');
 

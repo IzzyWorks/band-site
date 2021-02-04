@@ -11,16 +11,15 @@
       max-width: $desktop-breakpoint;
     }
   }
-
   &__header {
     font-family: AvenirNext LT Pro;
     font-weight: 700;
     width: 100%;
     color: $black;
     font-size: 1.25rem;
+    padding: 0rem 0rem 1.5rem 0rem;
     @include tablet {
       font-size: 1.55rem;
-      padding: 0rem 0rem 0rem 1.25rem;
     }
   }
   &__container {
@@ -28,10 +27,10 @@
     flex-flow: row;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: solid 1px $mercury;
+    margin-bottom: 1rem;
     @include tablet {
       width: 60%;
-      margin: 0 auto;
+      margin: 1rem auto 1.25rem auto;
     }
   }
 
@@ -80,7 +79,16 @@
     outline: none;
     background-color: $white;
   }
-
+  &__posts {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    border-bottom: solid 1px $mercury;
+    @include tablet {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
   &__lables {
     font-size: 0.55rem;
     color: $silver;
@@ -88,11 +96,9 @@
 
   &__btn-container {
     display: flex;
-    margin-bottom: 1.125rem;
     @include tablet {
       display: grid;
       justify-content: end;
-      margin-bottom: 1.125rem;
     }
   }
 
@@ -162,11 +168,9 @@
   &__block--post {
     display: flex;
     flex-flow: row;
+    width: 100%;
     padding: 0rem 0rem 0.875rem 0rem;
-    border-bottom: solid 1px $mercury;
-    @include desktop {
-      margin: 1.75rem auto;
-    }
+    border-top: solid 1px $mercury;
   }
 
   &__block--user-date {
