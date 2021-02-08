@@ -7,36 +7,12 @@ console.log("Comment Section");
 const apiUrl = "https://project-1-api.herokuapp.com";
 const apiKey = "api_key=198b2aad-e43c-4254-a784-baf19da9a83d";
 const commentsBlock = document.getElementById("commetBlock");
-const buttonEvent = document.querySelector(".form__fill-out-form");
-
-// Arrays + Objects
-
-// const listPostedComments = [
-//   {
-//     inputName: "Micheal Lyons",
-//     inputDate: "12/18/2018",
-//     addComment:
-//       "They BLEW the ROOF off at their last show, once everyone started figuring out they were going This is still simply the greatest opening of a concert I have EVER witnessed.",
-//   },
-//   {
-//     inputName: "Gary Wong",
-//     inputDate: "12/12/2018",
-//     addComment:
-//       "Every time I see his shred I feel so motivated to get off my couch and hop on my board. He's so talanted!.",
-//   },
-//   {
-//     inputName: "Theodore Ducan",
-//     inputDate: "11/15/2018",
-//     addComment: "How can someone be so good!!!",
-//   },
-// ];
 
 function getComments() {
   axios
     .get(`${apiUrl}/comments?${apiKey}`)
     .then(function (response) {
       console.table(response.data); // currently working
-      console.dir(response.data); // currently working
       newCommentBlock(transformSortDate(response.data));
       //   return response.data; // currently working
     })
@@ -54,31 +30,44 @@ function getComments() {
 //   return sortedArray;
 // }
 
-// // populate the page with stored array
-// // Append Post to DOM, formate structure
+// const myArray = newCommentBlock();
+// myArray.forEach((entry) => {
+//   console.log("This is a " + entry);
+// });
+
+// function dataSort = response.data.sort(function (a, b) {
+//     return b.timestamp - a.timestamp;
+//     // return b.name - a.name;
+//   });
 
 // function appendCommentBlock() {
 //   commentsBlock.innerHTML = "";
 
-//   for (let i = 0; i < listPostedComments.length; i++) {
-//     const commentObj = listPostedComments[i];
+//   for (let i = 0; i < newCommentBlock.length; i++) {
+//     const commentObj = newCommentBlock.data[i];
 
-//     // content
+// myArray.forEach((date) => {
+//   console.log("I have a " + date);
+// });
+//this is previously where js gets the array data
+// commentData.forEach(timeStamp => {
+//     console.log('This is the current time spamp " + (commentObj) {
+// content
 
 //     const Avatar = document.createElement("div");
 //     Avatar.classList.add("form__avatar-small");
 
 //     const userName = document.createElement("h2");
 //     userName.classList.add("form__user-name");
-//     userName.innerText = commentObj.inputName;
+//     userName.innerText = commentObj.name;
 
 //     const postDate = document.createElement("h4");
 //     postDate.classList.add("form__date");
-//     postDate.innerText = commentObj.inputDate;
+//     postDate.innerText = commentObj.timestamp;
 
 //     const postComments = document.createElement("p");
 //     postComments.classList.add("form__comments");
-//     postComments.innerText = commentObj.addComment;
+//     postComments.innerText = commentObj.comment;
 
 //     // container divs
 
@@ -127,26 +116,28 @@ function getComments() {
 
 // appendCommentBlock();
 
-// Submit Event
+// buttonEvent.addEventListener("submit", handleFormSubmit);
 
-buttonEvent.addEventListener("submit", handleFormSubmit);
+// function handleFormSubmit(event) {
+//   event.preventDefault();
+//   console.log(event.target);
 
-function handleFormSubmit(event) {
-  event.preventDefault();
-  const inputName = event.target.inputName.value;
-  const today = new Date();
-  const inputDate =
-    today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
-  const addComment = event.target.addComment.value;
+//   const name = event.target.name.value;
+//   //   const today = new Date();
+//   const date = Date.now();
+//   // today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+//   const comment = event.target.comment.value;
 
-  if (inputName === "") {
-    alert("Please add a User name");
-  } else if (addComment === "") {
-    alert("Please add a comment");
-  } else {
-    listPostedComments.unshift({ inputName, inputDate, addComment });
+//   if (inputName === "") {
+//     alert("Please add a User name");
+//   } else if (addComment === "") {
+//     alert("Please add a comment");
+//   } else {
+//     listPostedComments.unshift({ name, date, comment });
 
-    event.target.reset();
-    appendCommentBlock();
-  }
-}
+//     event.target.reset();
+//     appendCommentBlock();
+//   }
+// }
+
+// let newArray = oldArray.map(())
