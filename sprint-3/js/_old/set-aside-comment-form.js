@@ -23,12 +23,12 @@ function getComments() {
 
 // Try top understand this below - critical to solve problem
 
-// function transformSortDate(arr) {
-//   const sortedArray = arr.sort((a, b) => {
-//     return b.timestamp + a.timestamp;
-//   });
-//   return sortedArray;
-// }
+function transformSortDate(arr) {
+  const sortedArray = arr.sort((a, b) => {
+    return b.timestamp + a.timestamp;
+  });
+  return sortedArray;
+}
 
 // const myArray = newCommentBlock();
 // myArray.forEach((entry) => {

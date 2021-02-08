@@ -1,81 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <title>Band Site Shows</title>
 </head>
+
 <body>
-    
+
     <!-- Site Nav -->
-<nav class="nav-container">
-    <ul class="main-nav">
-        <li class="main-nav__logo-block">
-            <a href="/"><img src="../Logo/Logo-bandsite.svg" alt="Bandsite logo"></a>
-        </li>
-        <li class="main-nav__btn">
-            <a href="../index.html"><h2 class="main-nav__btn-font">Biography</h2></a>
-        </li>
-        <li class="main-nav__btn main-nav__btn--active">
-            <a href="#"><h2 class="main-nav__btn-font main-nav__btn-font--active">Shows</h2></a>
-        </li>
-    </ul>  
-</nav>
-
-<!-- Music Player -->
-<section class="music-player">
-    <div class="music-player__container">
-        <h1 class="music-player__cta-subheader">Woman Worldwide Album</h1>
-        <h1 class="music-player__cta-text">Waters of Nazareth x We Are your Friends x Phantom</h1>
-        <iframe class="music-player__iframe" width="460" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/502508130&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-    </div>
-</section>
-
-<!-- Shows table -->
-
-<section class="shows__container">
-    <div class="shows__header-container"><h1 class="shows__header">Shows</h1></div>
-    <section class="shows__list-container">
-        <div class="shows__lables-tablet-desktop"><h3 class="shows__tablet-desktop-headers">DATES</h3><h3 class="shows__tablet-desktop-headers">VENUE</h3><h3 class="shows__tablet-desktop-headers">LOCATION</h3><div class="shows__tablet-desktop-block"></div></div>
-        <ul id="showsList" class="show__show-list">
-            <!-- <li>some placeholder text here</li> -->
-            
-            <!-- js createElement + classList + object files here -->
+    <nav class="nav-container">
+        <ul class="main-nav">
+            <li class="main-nav__logo-block">
+                <a href="/"><img src="../Logo/Logo-bandsite.svg" alt="Bandsite logo"></a>
+            </li>
+            <li class="main-nav__btn">
+                <a href="../index.html">
+                    <h2 class="main-nav__btn-font">Biography</h2>
+                </a>
+            </li>
+            <li class="main-nav__btn main-nav__btn--active">
+                <a href="#">
+                    <h2 class="main-nav__btn-font main-nav__btn-font--active">Shows</h2>
+                </a>
+            </li>
         </ul>
-        
-    </section>
-</section>
+    </nav>
 
-<!-- Footer -->
-
-<footer class="footer">
-    <div class="footer__blocks">
-        <div class="footer__get-in-touch"><h2 class="footer__h2">Get In Touch</h2></div>
-        <div class="footer__social-media-icons">
-            <a href="#"><img class="footer__icons" src="../Icons/SVG/Icon-instagram.svg" alt="instagram social-media link"></a>
-            <a href="#"><img class="footer__icons" src="../Icons/SVG/Icon-facebook.svg" alt="facebook social-media link"></a>
-            <a href="#"><img class="footer__icons" src="../Icons/SVG/Icon-twitter.svg" alt="twitter social-media link"></a>
+    <!-- Music Player -->
+    <section class="music-player">
+        <div class="music-player__container">
+            <h1 class="music-player__cta-subheader">Woman Worldwide Album</h1>
+            <h1 class="music-player__cta-text">Waters of Nazareth x We Are your Friends x Phantom</h1>
+            <iframe class="music-player__iframe" width="460" height="166" scrolling="no" frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/502508130&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
         </div>
-        <div class="footer__empty"></div>
-        <img class="footer__logo" src="../Logo/Logo-bandsite.svg" alt="site logo">
-    </div>
-    <div>
-        <ul class="footer__blocks">
-            <li class="footer__block"><h3 class="footer__h3">Richard Rovner<br>The Bees Knees Managment<br><br></h3>
-                <h4 class="footer__h4">460 King Street West<br>Toronto,Ontario M5V 1L7<br><a class="footer__h4 footer__email" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></h4></li>
-            <li class="footer__block"><h3 class="footer__h3">Marsha Vlasic<br>Artist Group International<br><br></h3>
-                <h4 class="footer__h4">Booking Agent for<br>US / South America / Japan<br><a class="footer__h4 footer__email" href="mailto:mersha.vlasic@artistgrp.com">mersha.vlasic@artistgrp.com</a></h4></li>
-            <li class="footer__block"><h3 class="footer__h3">Russel Warby<br>William Morrir Entertainment<br><br></h3>
-                <h4 class="footer__h4">Booking Agent for<br>UK / EU / AU<br><a class="footer__h4 footer__email" href="mailto:RLW@wmeentertainment.com">RLW@wmeentertainment.com</a></h4></li>
-            <li class="footer__block footer__empty"></li>
-        </ul>
-        <div class="footer__blocks"><h4 class="footer__h4 footer__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</h4></div>
-    </div>
-</footer>
-<script src="../js/showsList.js"></script>
+    </section>
+
+    <!-- Shows table -->
+
+    <section class="shows__container">
+        <div class="shows__header-container">
+            <h1 class="shows__header">Shows</h1>
+        </div>
+        <section class="shows__list-container">
+            <div class="shows__lables-tablet-desktop">
+                <h3 class="shows__tablet-desktop-headers">DATES</h3>
+                <h3 class="shows__tablet-desktop-headers">VENUE</h3>
+                <h3 class="shows__tablet-desktop-headers">LOCATION</h3>
+                <div class="shows__tablet-desktop-block"></div>
+            </div>
+            <ul id="showsList" class="show__show-list">
+                <!-- <li>some placeholder text here</li> -->
+
+                <!-- js createElement + classList + object files here -->
+            </ul>
+
+        </section>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer__blocks">
+            <div class="footer__get-in-touch">
+                <h2 class="footer__h2">Get In Touch</h2>
+            </div>
+            <div class="footer__social-media-icons">
+                <a href="#"><img class="footer__icons" src="../Icons/SVG/Icon-instagram.svg"
+                        alt="instagram social-media link"></a>
+                <a href="#"><img class="footer__icons" src="../Icons/SVG/Icon-facebook.svg"
+                        alt="facebook social-media link"></a>
+                <a href="#"><img class="footer__icons" src="../Icons/SVG/Icon-twitter.svg"
+                        alt="twitter social-media link"></a>
+            </div>
+            <div class="footer__empty"></div>
+            <img class="footer__logo" src="../Logo/Logo-bandsite.svg" alt="site logo">
+        </div>
+        <div>
+            <ul class="footer__blocks">
+                <li class="footer__block">
+                    <h3 class="footer__h3">Richard Rovner<br>The Bees Knees Managment<br><br></h3>
+                    <h4 class="footer__h4">460 King Street West<br>Toronto,Ontario M5V 1L7<br><a
+                            class="footer__h4 footer__email"
+                            href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></h4>
+                </li>
+                <li class="footer__block">
+                    <h3 class="footer__h3">Marsha Vlasic<br>Artist Group International<br><br></h3>
+                    <h4 class="footer__h4">Booking Agent for<br>US / South America / Japan<br><a
+                            class="footer__h4 footer__email"
+                            href="mailto:mersha.vlasic@artistgrp.com">mersha.vlasic@artistgrp.com</a></h4>
+                </li>
+                <li class="footer__block">
+                    <h3 class="footer__h3">Russel Warby<br>William Morrir Entertainment<br><br></h3>
+                    <h4 class="footer__h4">Booking Agent for<br>UK / EU / AU<br><a class="footer__h4 footer__email"
+                            href="mailto:RLW@wmeentertainment.com">RLW@wmeentertainment.com</a></h4>
+                </li>
+                <li class="footer__block footer__empty"></li>
+            </ul>
+            <div class="footer__blocks">
+                <h4 class="footer__h4 footer__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</h4>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/showsList.js"></script>
 
 </body>
+
 </html>
