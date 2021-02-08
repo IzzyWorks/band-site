@@ -3,12 +3,12 @@
 console.log("Appending ShowsList");
 
 const apiUrl = "https://project-1-api.herokuapp.com";
-const apiKey = "api_key=638e8b45-470d-4e3c-9d54-8719b38a2a1e";
+const apiKey = "api_key=3579496f-2be7-422a-b252-c5597995b675";
 
 axios
   .get(`${apiUrl}/showdates?${apiKey}`)
   .then(function (response) {
-    console.log(response.data);
+    // console.log(response.data);
     appendShowsToDOM(response.data);
   })
   .catch(function (error) {

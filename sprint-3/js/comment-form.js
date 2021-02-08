@@ -5,7 +5,7 @@ console.log("Comment Section");
 // global variables
 
 const apiUrl = "https://project-1-api.herokuapp.com";
-const apiKey = "api_key=638e8b45-470d-4e3c-9d54-8719b38a2a1e";
+const apiKey = "api_key=3579496f-2be7-422a-b252-c5597995b675";
 const commentsBlock = document.getElementById("commetBlock");
 const buttonEvent = document.querySelector(".form__fill-out-form");
 
@@ -16,7 +16,6 @@ axios
   .get(`${apiUrl}/comments?${apiKey}`)
   .then(function (response) {
     // console.log(response.data.length);
-    // console.table(response.data); // currently working
     function sortDate(arr) {
       const sortedArray = arr.sort((a, b) => {
         return b.timestamp - a.timestamp;
@@ -25,51 +24,36 @@ axios
       return sortedArray;
     }
     appendCommentsToDOM(sortDate(response.data));
-    // console.log(sortDate(response.data));
+    console.log(sortDate(response.data));
   })
   .catch(function (error) {
     console.log(error);
   });
 
-// console.log(getComments());
+function appendCommentsToDOM(arr) {
+  console.log(arr);
+  commentsBlock.innerHTML = "";
 
-// SORT incomming data by timestamp
-
-// Append GET to DOM,
-// Formate timestamp
-
-// code snippit
-
-//   function formate(formateObjDate) {
-//     const fomateArray = formateObjDate.toLocaleDateString("en-US")
-//     return formateObjDate;
-//   };
-//   return fomateArray;
-// };
-
-function appendCommentsToDOM(responseArr) {
-  // console.log(commentArr);
-  // commentsBlock.innerHTML = "";
-  // console.log(commentArr);
-
-  for (let i = 0; i < responseArr.length; i++) {
-    console.log(responseArr[i]);
-    const commentObj = responseArr[i];
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    const commentObj = arr;
+    console.log(commentObj);
+    //const newDate = commentObj[i].timestamp.map(Date()); // I'm at a loss here
 
     const Avatar = document.createElement("div");
     Avatar.classList.add("form__avatar-small");
 
     const userName = document.createElement("h2");
     userName.classList.add("form__user-name");
-    userName.innerText = commentObj.name;
+    userName.innerText = commentObj[i].name;
 
     const postDate = document.createElement("h4");
     postDate.classList.add("form__date");
-    postDate.innerText = commentObj.date;
+    postDate.innerText = commentObj[i].timestamp; //newDate[i].timestamp;
 
     const postComments = document.createElement("p");
     postComments.classList.add("form__comments");
-    postComments.innerText = commentObj.comment;
+    postComments.innerText = commentObj[i].comment;
 
     // container divs
 
@@ -117,7 +101,6 @@ function appendCommentsToDOM(responseArr) {
 }
 
 // appendCommentsToDOM();
-
 // Submit Event
 
 buttonEvent.addEventListener("submit", handleFormSubmit);
@@ -126,31 +109,19 @@ function handleFormSubmit(event) {
   event.preventDefault();
   const name = event.target.name.value;
   const comment = event.target.comment.value;
-  // const today = new Date();
-  // const inputDate =
-  //   today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
-
-  // Event conditions
-
   if (name === "") {
     alert("Please add a User name");
   } else if (comment === "") {
     alert("Please add a comment");
   } else {
-    axios
-      .post(`${apiUrl}/comments?${apiKey}`, {
+    axios({
+      method: "post",
+      url: `${apiUrl}/comments?${apiKey}`,
+      data: {
         name: name,
         comment: comment,
-      })
-      .then(function (response) {
-        console.log(response);
-        appendCommentsToDOM(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      },
+    });
   }
   event.target.reset();
 }
-
-// POST data to URL
