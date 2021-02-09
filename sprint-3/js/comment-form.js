@@ -9,51 +9,59 @@ const apiKey = "api_key=3579496f-2be7-422a-b252-c5597995b675";
 const commentsBlock = document.getElementById("commetBlock");
 const buttonEvent = document.querySelector(".form__fill-out-form");
 
-// GET data from URL
-
-// function getComments() {
-axios
-  .get(`${apiUrl}/comments?${apiKey}`)
-  .then(function (response) {
-    // console.log(response.data.length);
-    function sortDate(arr) {
-      const sortedArray = arr.sort((a, b) => {
-        return b.timestamp - a.timestamp;
-      });
-      // console.log(sortedArray.length);
-      return sortedArray;
-    }
-    appendCommentsToDOM(sortDate(response.data));
-    console.log(sortDate(response.data));
-  })
-  .catch(function (error) {
-    console.log(error);
+function sortDate(arr) {
+  console.log("hello world");
+  const sortedArray = arr.sort((a, b) => {
+    return b.timestamp - a.timestamp;
   });
+  // console.log(sortedArray.length);
+  return sortedArray;
+}
+console.log("hello world");
+
+// GET data from URL
+function getComments() {
+  axios
+    .get(`${apiUrl}/comments?${apiKey}`)
+    .then(function (response) {
+      console.log(response);
+      // appendCommentsToDOM(sortDate(response.data));
+      appendCommentsToDOM(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
 function appendCommentsToDOM(arr) {
-  console.log(arr);
+  // console.log(arr);
   commentsBlock.innerHTML = "";
-
+  sortDate(arr);
   for (let i = 0; i < arr.length; i++) {
-    // console.log(arr[i]);
-    const commentObj = arr;
-    console.log(commentObj);
-    //const newDate = commentObj[i].timestamp.map(Date()); // I'm at a loss here
+    // console.log(arr);
+    const commentObj = arr[i];
+    // console.log(commentObj);
+    // arr.timestamp.map() => {
+    //   return timestamp =
+    // };
+    // const newDate = commentObj[i].timestamp.map(Date()); // I'm at a loss here
 
     const Avatar = document.createElement("div");
     Avatar.classList.add("form__avatar-small");
 
     const userName = document.createElement("h2");
     userName.classList.add("form__user-name");
-    userName.innerText = commentObj[i].name;
+    userName.innerText = commentObj.name;
 
     const postDate = document.createElement("h4");
     postDate.classList.add("form__date");
-    postDate.innerText = commentObj[i].timestamp; //newDate[i].timestamp;
+    postDate.innerText = new Date(commentObj.timestamp).toLocaleDateString();
+
+    // innerText = commentObj.timestamp; //newDate[i].timestamp;
 
     const postComments = document.createElement("p");
     postComments.classList.add("form__comments");
-    postComments.innerText = commentObj[i].comment;
+    postComments.innerText = commentObj.comment;
 
     // container divs
 
@@ -122,6 +130,8 @@ function handleFormSubmit(event) {
         comment: comment,
       },
     });
+    getComments();
   }
+  console.log("hello world");
   event.target.reset();
 }
